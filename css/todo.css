@@ -132,6 +132,11 @@ main {
     border: none;
     outline: none;
     margin-bottom: 1vw;
+    transition: 0.3s;
+    color: #FFFFFF;
+}
+.add-btn:hover{
+    background-color: #270454;
 }
 .add-btn span{
     padding-left: 1.5vw;
