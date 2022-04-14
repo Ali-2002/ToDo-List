@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/todo.css">
+</head>
+
+<body>
+    <main>
+        <div class="main-container">
+            <div class="container">
+                <div class="yellow-header">
+                </div>
+                <div class="content">
+                    <div class="header">
+                        <h1 class="title">To-Do List</h1>
+                    </div>
+                    <div class="todo">
+                        <div class="sort">
+                            <img class="sort-first" src="images/gray-sort-icon.svg"
+                                onmouseover="this.src='images/black-sort-icon.svg'"
+                                onmouseout="this.src='images/gray-sort-icon.svg'" alt="">
+                            <img class="sort-second" src="/images/grey-reverse-sort-icon.svg"
+                                onmouseover="this.src='images/black-reverse-sort-icon.svg'"
+                                onmouseout="this.src='images/grey-reverse-sort-icon.svg'" alt="">
+                        </div>
+                        <div class="lists">
+                            <ul class="list">
+                                <li class="text">Salamlar</li>
+                                <buton class="removeBtn">
+                                    <img src="images/gray-circle-x.svg"
+                                        onmouseover="this.src='images/puple-circle-x.svg'"
+                                        onmouseout="this.src='images/gray-circle-x.svg'" alt="">
+                                </buton>
+                            </ul>
+                        </div>
+                        <div class="input-content">
+                            <input class="list-input" type="text" name="todo-list">
+                            <buton class="removeBtn">
+                                <img src="images/gray-circle-x.svg" onmouseover="this.src='images/puple-circle-x.svg'"
+                                    onmouseout="this.src='images/gray-circle-x.svg'" alt="">
+                            </buton>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <button class="add-btn">
+                            <div class="plus-btn">+</div> <span>Əlavə et</span> 
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
