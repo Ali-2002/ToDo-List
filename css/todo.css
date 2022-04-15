@@ -87,9 +87,13 @@ main {
 .list .text {
     display: block;
     max-width: 22vw;
+    overflow: auto;
 }
 
 .removeBtn {
+    background-color: #FFFFFF;
+    border: none;
+    outline: none;
     padding-right: 1vw;
     padding-left: 1vw;
 }
