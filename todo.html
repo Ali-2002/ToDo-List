@@ -19,7 +19,7 @@
                     <div class="header">
                         <h1 class="title">To-Do List</h1>
                     </div>
-                    <div class="todo">
+                    <div class="sort-container">
                         <div class="sort">
                             <img class="sort-first" src="images/gray-sort-icon.svg"
                                 onmouseover="this.src='images/black-sort-icon.svg'"
@@ -28,21 +28,19 @@
                                 onmouseover="this.src='images/black-reverse-sort-icon.svg'"
                                 onmouseout="this.src='images/grey-reverse-sort-icon.svg'" alt="">
                         </div>
-                        <div class="lists">
-                            <ul class="list">
-                                <li class="text">Salamlar</li>
-                                <buton class="removeBtn">
+                        <ul class="todo-list">
+                            <!-- <ul class="todo">
+                                <li class="text">Dərs oxumaq</li>
+                                <buton class="remove-btn">
                                     <img src="images/gray-circle-x.svg"
                                         onmouseover="this.src='images/puple-circle-x.svg'"
                                         onmouseout="this.src='images/gray-circle-x.svg'" alt="">
                                 </buton>
-                            </ul>
-                        </div>
+                            </ul> -->
+                        </ul>
                         <div class="input-content">
-                            <input class="list-input" type="text" name="todo-list">
-                            <buton class="removeBtn">
-                                <img src="images/gray-circle-x.svg" onmouseover="this.src='images/puple-circle-x.svg'"
-                                    onmouseout="this.src='images/gray-circle-x.svg'" alt="">
+                            <input class="todo-input" id="myInput" type="text" name="todo-list" required autofocus placeholder="Qeydi daxil edin...">
+                            <buton class="x-btn" onclick="document.getElementById('myInput').value = '' ">   
                             </buton>
                         </div>
                     </div>
