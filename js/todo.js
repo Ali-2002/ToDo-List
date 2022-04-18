@@ -47,6 +47,9 @@ document.addEventListener('keyup', (event) => {
             todoList.style.borderRadius = "0.5vw";
             todoList.style.borderBottom = "0.1em solid #C4C4C4";
             todoList.style.marginBottom = "1.5vw";
+
+            todoList.scrollTop = todoList.scrollHeight;
+
             deleteX();
         }
     }

@@ -122,14 +122,12 @@ main {
     background-color: #FFFFFF;
     border: none;
     outline: none;
-    padding-right: 1.4vw;
-    margin-right: 1vw;
-    margin-left: 1vw;
-
+    padding: 0 0.5vw;
+    background-size: cover;
     background-image: url("/images/gray-circle-x.svg");
     background-repeat: no-repeat;
-    width: 1.4vw;
-    height: 1.4vw;
+    width: 1.5vw;
+    height: 1.5vw;
 }
 
 .remove-btn:hover,
