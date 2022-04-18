@@ -76,6 +76,7 @@ main {
 }
 
 .todo-list {
+    display: none;
     width: 25vw;
     border: 0.1em solid #C4C4C4;
     border-bottom: none;
@@ -106,7 +107,6 @@ main {
 } */
 
 .todo-item {
-    display: block;
     overflow: auto;
     /* padding: 0.1vw 0; */
 
@@ -148,10 +148,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5vw;
+    padding: 0.99vw;
     margin-bottom: 1.5vw;
-    border-top: none;
-    border-radius: 0 0 0.5vw 0.5vw;
+    border-radius: 0.5vw;
 }
 
 .input-content .todo-input {

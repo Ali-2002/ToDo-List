@@ -7,10 +7,8 @@ const sortBtn = document.querySelector(".sort");
 const ascSort = document.querySelector(".sort-first");
 const descSort = document.querySelector(".sort-second");
 
-
 let arrList = [];
 
-// let AssendingSort = false;
 //Event Listeners
 document.addEventListener('keyup', (event) => {
     if (event.keyCode === 13) {
@@ -18,8 +16,8 @@ document.addEventListener('keyup', (event) => {
             event.preventDefault();
 
             todoList.style.display = "block";
-            inputContent.style.borderTop="none";
-            inputContent.style.borderRadius="0 0 0.5vw 0.5vw";
+            inputContent.style.borderTop = "none";
+            inputContent.style.borderRadius = "0 0 0.5vw 0.5vw";
 
             // const todoDiv = document.createElement("div");
             // todoDiv.classList.add("todo");
@@ -40,7 +38,6 @@ document.addEventListener('keyup', (event) => {
                 }
             });
             const removeBtn = document.createElement('button');
-            //removeBtn.innerHTML = '<img src="images/gray-circle-x.svg" alt="">';
             removeBtn.classList.add("remove-btn");
             newTodo.appendChild(removeBtn);
 
@@ -75,15 +72,6 @@ function deleteX() {
     deleteBtn.forEach(element => {
         element.addEventListener('click', myFunction);
     });
-
-
-    // const todoList = document.querySelector(".todo-list");
-    // const inputContent = document.querySelector(".input-content");
-    // if(todoList.childElementCount==0){
-    //     inputContent.style.display="flex";
-    // }
-
-
 }
 //Silmek ucun isledilen metod
 function myFunction() {
@@ -97,12 +85,6 @@ function myFunction() {
     }
 
 }
-
-
-
-// function getFocus() {
-//     document.getElementById("myInput").focus();
-//   }
 
 
 function addOrderArr() {
@@ -148,5 +130,5 @@ function orderDesc(e) {
 
 const drag = document.querySelector('.wrapper')
 new Sortable(drag, {
-    animation : 250
+    animation: 250
 })
