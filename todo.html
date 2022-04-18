@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/todo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js" integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -26,28 +27,25 @@
                                 onmouseout="this.src='images/gray-sort-icon.svg'" alt="">
 
                             <img class="sort-second" src="/images/grey-reverse-sort-icon.svg"
-                                onmouseover="this.src='images/black-reverse-sort-icon.svg'"
-                                onmouseout="this.src='images/grey-reverse-sort-icon.svg'" alt="">
+                                onmouseover="this.src='images/black-sort-reverse.svg'"
+                                onmouseout="this.src='images/grey-reverse-sort-icon.svg'" width="2.2vw" alt="">
                         </div>
-                        <ul class="todo-list" id="list">
+                        <ul class="todo-list wrapper" id="list">
                             <!-- <div class="todo">
                                 <li class="todo-item">Dərs oxumaq</li>
-                                <buton class="remove-btn">
-                                    <img src="images/gray-circle-x.svg"
-                                        onmouseover="this.src='images/puple-circle-x.svg'"
-                                        onmouseout="this.src='images/gray-circle-x.svg'" alt="">
-                                </buton>
+                                <buton class="remove-btn"></buton>
                             </div> -->
                         </ul>
                         <div class="input-content">
-                            <input class="todo-input" id="myInput" type="text" name="todo-list" required autofocus placeholder="Qeydi daxil edin...">
-                            <buton class="x-btn" onclick="document.getElementById('myInput').value = '' ">   
+                            <input class="todo-input" id="myInput" type="text" name="todo-list" required autofocus
+                                placeholder="Qeydi daxil edin...">
+                            <buton class="x-btn" onclick="document.getElementById('myInput').value = '' ">
                             </buton>
                         </div>
                     </div>
                     <div class="footer">
                         <button class="add-btn">
-                            <div class="plus-btn">+</div> <span>Əlavə et</span> 
+                            <div class="plus-btn">+</div> <span>Əlavə et</span>
                         </button>
                     </div>
                 </div>

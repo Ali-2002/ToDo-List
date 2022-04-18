@@ -7,9 +7,10 @@ const sortBtn = document.querySelector(".sort");
 const ascSort = document.querySelector(".sort-first");
 const descSort = document.querySelector(".sort-second");
 
+
 let arrList = [];
 
-let AssendingSort = false;
+// let AssendingSort = false;
 //Event Listeners
 document.addEventListener('keyup', (event) => {
     if (event.keyCode === 13) {
@@ -25,7 +26,9 @@ document.addEventListener('keyup', (event) => {
 
             const newTodo = document.createElement("li");
             newTodo.classList.add("todo-item");
+            newTodo.classList.add("item");
             newTodo.innerText = todoInput.value;
+            newTodo.setAttribute('draggable', true)
             todoDiv.appendChild(newTodo);
 
             //Butun siyahini goturub arraye atmaq
@@ -97,10 +100,6 @@ function myFunction() {
 
 
 
-
-
-
-
 // function getFocus() {
 //     document.getElementById("myInput").focus();
 //   }
@@ -144,3 +143,8 @@ function orderDesc(e) {
 
     });
 }
+
+const drag = document.querySelector('.wrapper')
+new Sortable(drag, {
+    animation : 250
+})
