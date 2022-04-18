@@ -20,16 +20,17 @@ document.addEventListener('keyup', (event) => {
             todoList.style.display = "block";
             inputContent.style.borderTop="none";
             inputContent.style.borderRadius="0 0 0.5vw 0.5vw";
-            const todoDiv = document.createElement("div");
-            todoDiv.classList.add("todo");
-            todoList.appendChild(todoDiv);
+
+            // const todoDiv = document.createElement("div");
+            // todoDiv.classList.add("todo");
+            // todoList.appendChild(todoDiv);
 
             const newTodo = document.createElement("li");
             newTodo.classList.add("todo-item");
             newTodo.classList.add("item");
             newTodo.innerText = todoInput.value;
             newTodo.setAttribute('draggable', true)
-            todoDiv.appendChild(newTodo);
+            todoList.appendChild(newTodo);
 
             //Butun siyahini goturub arraye atmaq
             const allList = document.querySelectorAll(".todo-item");
@@ -41,7 +42,7 @@ document.addEventListener('keyup', (event) => {
             const removeBtn = document.createElement('button');
             //removeBtn.innerHTML = '<img src="images/gray-circle-x.svg" alt="">';
             removeBtn.classList.add("remove-btn");
-            todoDiv.appendChild(removeBtn);
+            newTodo.appendChild(removeBtn);
 
             todoInput.value = "";
 
@@ -61,13 +62,12 @@ addBtn.addEventListener('click', () => {
     todoList.style.borderRadius = "0.5vw 0.5vw 0 0";
     todoList.style.borderBottom = "none";
     todoList.style.marginBottom = "0";
-    inputContent.focus();
+    todoInput.focus();
 });
 
 //Sorting hissesi
 ascSort.addEventListener('click', orderAsc);
 descSort.addEventListener('click', orderDesc);
-
 //Functions
 
 function deleteX() {
@@ -110,8 +110,8 @@ function addOrderArr() {
     const listItems = document.querySelectorAll('.todo-item');
     listItems.forEach((item, index) => {
 
-        arrList.push(item.textContent);
-
+        arrList.push(item.innerHTML);
+        console.log(item.innerHTML);
     });
 
     arrList.sort();
@@ -125,9 +125,10 @@ function orderAsc(e) {
     e.target.style.display = 'none';
     listItems.forEach((item, index) => {
 
-        item.textContent = arrList[index];
+        item.innerHTML = arrList[index];
         console.log(item);
     });
+    deleteX();
 }
 
 
@@ -139,9 +140,10 @@ function orderDesc(e) {
     e.target.style.display = 'none';
     listItems.forEach((item, index) => {
 
-        item.textContent = arrRevList[index];
+        item.innerHTML = arrRevList[index];
 
     });
+    deleteX();
 }
 
 const drag = document.querySelector('.wrapper')
