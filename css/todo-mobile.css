@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400&display=swap');
 
-/* --------------------DESKTOP----------------- */
+/* ---------------------MOBILE------------------- */
 
-@media screen and (min-width:801px) {
+@media screen and (min-width:320px) and (max-width:800px) {
     * {
         margin: 0;
         padding: 0;
@@ -12,7 +12,7 @@
         font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 1.2vw;
+        font-size: 4.2vw;
         line-height: 1.4vw;
     }
 
@@ -26,15 +26,15 @@
     }
 
     .container {
-        width: 29.2vw;
+        width: 70vw;
         border: 0.1em solid #C4C4C4;
-        border-radius: 0.9vw;
+        border-radius: 2vw;
     }
 
     .yellow-header {
         width: 100%;
-        height: 2.4vw;
-        border-radius: 0.8vw 0.8vw 0 0;
+        height: 5.5vw;
+        border-radius: 1.8vw 1.8vw 0 0;
         background-color: #FFDC40;
     }
 
@@ -45,28 +45,24 @@
     }
 
     .header {
-        margin-top: 1vw;
-        margin-bottom: 1.4vw;
+        margin-top: 4vw;
+        margin-bottom: 3.5vw;
     }
 
     .header h1 {
         font-weight: 900;
-        font-size: 2.25vw;
-        line-height: 2.6vw;
-        text-align: center;
-        text-transform: capitalize;
-
-        color: #000000;
+        font-size: 6.25vw;
+        line-height: 5.6vw;
     }
 
     .sort-container .sort {
         display: flex;
         justify-content: flex-end;
-        padding: 0 0.8vw 0.5vw 0
+        padding: 0 2.8vw 2.5vw 0
     }
 
     .sort img {
-        width: 2.2vw;
+        width: 4.2vw;
     }
 
     .sort img:hover {
@@ -80,11 +76,11 @@
 
     .todo-list {
         display: none;
-        width: 25vw;
+        width: 50vw;
         border: 0.1em solid #C4C4C4;
         border-bottom: none;
-        border-radius: 0.5vw 0.5vw 0 0;
-        max-height: 32vh;
+        border-radius: 0.8vw 0.8vw 0 0;
+        max-height: 40vh;
         overflow: auto;
     }
 
@@ -137,26 +133,24 @@
     .x-btn:hover {
         background-image: url("/images/puple-circle-x.svg");
         background-repeat: no-repeat;
-        width: 1.5vw;
-        height: 1.5vw;
         cursor: pointer;
     }
 
     .input-content {
-        width: 25vw;
-        height: 3vw;
+        width: 40vw;
+        height: 6vw;
         border: 0.1em solid #C4C4C4;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0.99vw;
-        margin-bottom: 1.5vw;
+        padding: 1.2vw;
+        margin-bottom: 2.5vw;
         border-radius: 0.5vw;
     }
 
     .input-content .todo-input {
-        width: 22vw;
-        height: 2.5vw;
+        width: 34vw;
+        height: 5vw;
         border: none;
         outline: none;
     }
@@ -167,7 +161,7 @@
     }
 
     .add-btn {
-        width: 13vw;
+        width: 24vw;
         border-radius: 6vw;
         background-color: #833AE0;
         display: flex;
@@ -189,12 +183,13 @@
     }
 
     .add-btn .plus-btn {
-        width: 3.6vw;
-        height: 3.6vw;
+        width: 6vw;
+        height: 6vw;
         border-radius: 50%;
         background-color: #9953F1;
         display: flex;
         justify-content: center;
         align-items: center;
+
     }
 }
