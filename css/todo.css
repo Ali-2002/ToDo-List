@@ -84,7 +84,7 @@
         border: 0.1em solid #C4C4C4;
         border-bottom: none;
         border-radius: 0.5vw 0.5vw 0 0;
-        max-height: 32vh;
+        max-height: 15vw;
         overflow: auto;
     }
 
@@ -103,16 +103,8 @@
         background: rgba(0, 0, 0, 0.2);
     }
 
-    /* .todo {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5vw;
-} */
-
     .todo-item {
         overflow: auto;
-        /* padding: 0.1vw 0; */
-
         display: flex;
         justify-content: space-between;
         padding: 0.5vw 0;

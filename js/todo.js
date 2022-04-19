@@ -19,18 +19,14 @@ document.addEventListener('keyup', (event) => {
             inputContent.style.borderTop = "none";
             inputContent.style.borderRadius = "0 0 0.5vw 0.5vw";
 
-            // const todoDiv = document.createElement("div");
-            // todoDiv.classList.add("todo");
-            // todoList.appendChild(todoDiv);
-
             const newTodo = document.createElement("li");
             newTodo.classList.add("todo-item");
             newTodo.classList.add("item");
             newTodo.innerText = todoInput.value;
-            newTodo.setAttribute('draggable', true)
+            newTodo.setAttribute('draggable', true) //drag drop üçün dragable true atributu əlavə edirik
             todoList.appendChild(newTodo);
 
-            //Butun siyahini goturub arraye atmaq
+            //Bütün siyahıdakı elementləri götürüb arraye push eləmək
             const allList = document.querySelectorAll(".todo-item");
             allList.forEach((element, index) => {
                 if (index != 0) {
@@ -48,7 +44,7 @@ document.addEventListener('keyup', (event) => {
             todoList.style.borderBottom = "0.1em solid #C4C4C4";
             todoList.style.marginBottom = "1.5vw";
 
-            todoList.scrollTop = todoList.scrollHeight;
+            todoList.scrollTop = todoList.scrollHeight; // Siyahının son elementini göstərir hər zaman
 
             deleteX();
         }
@@ -65,21 +61,26 @@ addBtn.addEventListener('click', () => {
     todoInput.focus();
 });
 
-//Sorting hissesi
+//Sorting hissəsi
 ascSort.addEventListener('click', orderAsc);
 descSort.addEventListener('click', orderDesc);
+
 //Functions
 
+//Silmek üçün click edən zaman
 function deleteX() {
     const deleteBtn = document.querySelectorAll('.remove-btn');
     deleteBtn.forEach(element => {
         element.addEventListener('click', myFunction);
     });
 }
-//Silmek ucun isledilen metod
+
+//Silmek ucun işlədilən metod(remove ilə funksiyanı göndərirəm) 
 function myFunction() {
     this.parentNode.remove(this.parentNode);
     const allList = document.querySelectorAll(".todo-item");
+
+    // listimizdə element olmazsa input görünsün
     if (allList.length == 0) {
         inputContent.style.display = "flex";
         inputContent.style.border = "0.1em solid #c4c4c4";
@@ -89,7 +90,7 @@ function myFunction() {
 
 }
 
-
+// Sort hissəsi
 function addOrderArr() {
     arrList = []
     const listItems = document.querySelectorAll('.todo-item');
@@ -130,6 +131,7 @@ function orderDesc(e) {
     });
     deleteX();
 }
+
 
 const drag = document.querySelector('.wrapper')
 new Sortable(drag, {
