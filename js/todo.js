@@ -51,6 +51,8 @@ document.addEventListener('keyup', (event) => {
     }
 });
 
+
+
 addBtn.addEventListener('click', () => {
     inputContent.style.display = "flex";
     todoList.style.borderRadius = "0.5vw 0.5vw 0 0";
@@ -80,6 +82,9 @@ descSort.addEventListener('mouseout', (event) => {
     event.target.setAttribute('src', 'images/grey-reverse-sort-icon.svg');
 });
 
+todoInput.addEventListener('click', (event) => {
+    todoList.scrollTop = todoList.scrollHeight;
+});
 
 //Functions
 
