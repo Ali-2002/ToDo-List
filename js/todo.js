@@ -51,19 +51,35 @@ document.addEventListener('keyup', (event) => {
     }
 });
 
-
-
 addBtn.addEventListener('click', () => {
     inputContent.style.display = "flex";
     todoList.style.borderRadius = "0.5vw 0.5vw 0 0";
     todoList.style.borderBottom = "none";
     todoList.style.marginBottom = "0";
+    todoList.scrollTop = todoList.scrollHeight;
     todoInput.focus();
 });
 
 //Sorting hissəsi
 ascSort.addEventListener('click', orderAsc);
 descSort.addEventListener('click', orderDesc);
+
+ascSort.addEventListener('mouseover', (event) => {
+    event.target.setAttribute('src', 'images/black-sort-icon.svg');
+});
+
+ascSort.addEventListener('mouseout', (event) => {
+    event.target.setAttribute('src', 'images/gray-sort-icon.svg');
+});
+
+descSort.addEventListener('mouseover', (event) => {
+    event.target.setAttribute('src', 'images/black-sort-reverse.svg');
+});
+
+descSort.addEventListener('mouseout', (event) => {
+    event.target.setAttribute('src', 'images/grey-reverse-sort-icon.svg');
+});
+
 
 //Functions
 
@@ -136,4 +152,4 @@ function orderDesc(e) {
 const drag = document.querySelector('.wrapper')
 new Sortable(drag, {
     animation: 250
-})  
+})
